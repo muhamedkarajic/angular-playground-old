@@ -123,5 +123,8 @@
       }
     }
   },
-  "defaultProject": "angular-playground"
+  "defaultProject": "angular-playground",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }
