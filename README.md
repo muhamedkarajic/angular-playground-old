@@ -1,4 +1,4 @@
-# Angular 11 Playground
+# Angular 11 Default Setup
 
 ## Packages
 1. ESLint
