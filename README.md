@@ -8,7 +8,7 @@
 
 ## Commands
 1. Starting project by typing `ng serve`
-2. Check for errors using ESlint by typing `npm run lint`
+2. Check for errors using ESlint by typing `ng lint`
 3. Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 4. Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 5. Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
