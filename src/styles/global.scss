@@ -1,0 +1,9 @@
+@import './normalize.scss';
+@import './reset.scss';
+@import './variables.scss';
+@import './override.scss';
+.custom-class-to-test
+{
+  background-color: black!important;
+  color: pink;
+}
