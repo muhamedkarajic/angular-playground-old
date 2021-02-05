@@ -1,7 +1,7 @@
 # Angular 11 Playground
 
 ## Packages
-1. ES lint
+1. ESLint
 2. Prettier
 3. Karma
 4. Jasmine
