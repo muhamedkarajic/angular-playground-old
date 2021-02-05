@@ -26,6 +26,16 @@
     "**/.hg": true,
     "**/CVS": true,
     "**/.DS_Store": true,
-    "node_modules": true
+    "node_modules": true,
+    ".browserslistrc": true,
+    ".editorconfig": true,
+    ".eslintignore": true,
+    ".angulardoc.json": true,
+    ".gitignore": true,
+    "src/polyfills.ts": true,
+    "package-lock.json": true,
+    "tsconfig.app.json": true,
+    "tsconfig.json": true,
+    "tsconfig.spec.json": true
   }
 }
