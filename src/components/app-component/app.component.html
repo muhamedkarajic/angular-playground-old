@@ -1,6 +1,7 @@
-
+<h1>Login:</h1>
 <form [formGroup]='loginForm' *ngIf="loginForm" >
-  <reactive-input [label]="'Email'" [name]="'email'" [control]="email"></reactive-input>
+  <reactive-input [name]='"email"' [control]='email'></reactive-input>
+  <reactive-input [name]='"password"' [type]='"password"' [control]='password'></reactive-input>
 </form>
 
 <router-outlet></router-outlet>

@@ -15,7 +15,7 @@ export class AppComponent {
     CustomValidator.email
   ]);
 
-  password:FormControl = new FormControl('', [
+  password: FormControl = new FormControl('', [
     CustomValidator.required,
     CustomValidator.minLength(5),
     CustomValidator.maxLength(16),

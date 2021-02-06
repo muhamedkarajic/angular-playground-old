@@ -7,8 +7,9 @@ import {
 } from '@angular/forms';
 
 export class CustomValidator extends Validators {
-  static printError(control: FormControl): string {
-    if (control.hasError('required')) return 'This field is required.';
+  static showError(control: FormControl, name?: string): string {
+    if (!name) name = 'This field';
+    if (control.hasError('required')) return `${name} is required.`;
     if (control.hasError('email')) return 'Email is not valid.';
     if (control.hasError('minlength'))
       return `Minimum lenght of ${control.errors?.minlength.requiredLength} required.`;

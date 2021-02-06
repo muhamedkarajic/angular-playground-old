@@ -5,9 +5,10 @@
     [name]='name'
     [type]='type'
     [required]='required'
+    [placeholder]='placeholder'
     [formControl]='control'
   />
-  <div *ngIf="control.invalid && control.errors && (control.dirty || control.touched)">
+  <div *ngIf='control.invalid && control.errors && (control.dirty || control.touched)' class='error'>
     {{ showError }}
   </div>
 </div>
