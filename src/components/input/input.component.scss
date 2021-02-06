@@ -7,6 +7,7 @@ $spacing-horizontal: 3px;
 .ractive-input {
   margin-bottom: 25px;
   position: relative;
+
   label {
     display: block;
     margin-bottom: 5px;
@@ -32,7 +33,7 @@ $spacing-horizontal: 3px;
     border-width: $input-border-width;
   }
 
-  .error {
+  .showError {
     color: red;
     font-size: 12px;
     margin-top: 3px;

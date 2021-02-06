@@ -36,6 +36,7 @@
     "package-lock.json": true,
     "tsconfig.app.json": true,
     "tsconfig.json": true,
-    "tsconfig.spec.json": true
+    "tsconfig.spec.json": true,
+    "src/assets/.gitkeep": true
   }
 }

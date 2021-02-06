@@ -13,16 +13,12 @@ export class HasRequiredFieldPipe implements PipeTransform {
 
   transform(control: AbstractControl): string {
     const newHashOfControl = hash(control);
-
     if (newHashOfControl !== this.cachedControlHash) {
       const nowHasRequiredField = Helpers.hasRequiredField(control);
-
       this.cachedControlHash = hash(control);
       this.cachedResult = nowHasRequiredField;
-
       return '*';
     }
-
     return '';
   }
 }

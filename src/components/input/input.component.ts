@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { Required } from 'src/decorators/required.decorator';
 import { Helpers } from 'src/utilities/helpers';
 import { CustomValidator } from 'src/utilities/validators';
 
@@ -15,10 +16,10 @@ export class InputComponent implements OnInit {
   @Input() type: 'number' | 'text' | 'password' = 'text';
   @Input() required = false;
   @Input() class = '';
-  @Input() control: FormControl;
+  @Input() @Required control: FormControl;
 
   ngOnInit(): void {
-    this.required = Helpers.hasRequiredField(this.control);
+    if (this.control) this.required = Helpers.hasRequiredField(this.control);
     if (!this.label) this.label = Helpers.humanize(this.name, true);
     if (!this.placeholder)
       this.placeholder = `Enter ${Helpers.humanize(this.name)}`;

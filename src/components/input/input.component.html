@@ -8,7 +8,7 @@
     [placeholder]='placeholder'
     [formControl]='control'
   />
-  <div *ngIf='control.invalid && control.errors && (control.dirty || control.touched)' class='error'>
+  <div *ngIf='control.invalid && control.errors && (control.dirty || control.touched)' class='showError'>
     {{ showError }}
   </div>
 </div>

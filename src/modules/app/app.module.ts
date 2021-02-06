@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from 'src/components/app-component/app.component';
 import { RequiredPipe } from 'src/pipes/required-input.pipe';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HasRequiredFieldPipe } from 'src/pipes/has-required-field';
+import { HasRequiredFieldPipe } from 'src/pipes/has-required-field.pipe';
 
 @NgModule({
   declarations: [
