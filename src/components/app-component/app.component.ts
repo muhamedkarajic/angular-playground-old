@@ -29,4 +29,10 @@ export class AppComponent {
     email: this.email,
     password: this.password
   });
+
+  loading = false;
+
+  submitHandler(): void {
+    this.loading = true;
+  }
 }

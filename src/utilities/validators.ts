@@ -15,11 +15,13 @@ export class CustomValidator extends Validators {
       return `Minimum lenght of ${control.errors?.minlength.requiredLength} required.`;
     if (control.hasError('maxlength'))
       return `Maximum lenght of ${control.errors?.maxlength.requiredLength} allowed.`;
-    if (control.hasError('hasNumber')) return 'Require 1 number.';
+    if (control.hasError('hasNumber')) return `${name} requires one digit.`;
     if (control.hasError('hasCapitalCase'))
-      return 'Require 1 capital character.';
-    if (control.hasError('hasSmallCase')) return 'Require 1 small character.';
-    if (control.hasError('hasSpecialCharacters')) return 'Require 1 simbol.';
+      return `${name} requires one upper case letter.`;
+    if (control.hasError('hasSmallCase'))
+      return `${name} requires one small character.`;
+    if (control.hasError('hasSpecialCharacters'))
+      return `${name} requires one simbil.`;
     return JSON.stringify(control.errors);
   }
 

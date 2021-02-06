@@ -10,4 +10,6 @@ export class ReactiveButtonComponent {
   @Input() label = '';
   @Input() type: 'button' | 'menu' | 'rest' | 'submit' = 'button';
   @Input() class = '';
+  @Input() disabled = false;
+  @Input() loading = false;
 }

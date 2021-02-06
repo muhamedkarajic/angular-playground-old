@@ -1,17 +1,48 @@
 $primary: #6979f8;
-$spacing-vertical: 9px;
-$input-border-width: 3px;
-$input-height: 38px;
+$primary-darker: #6173f8;
+$primary-light: #7887f7;
+$primary-disabled: #a8b2fa;
+$button-height: 45px;
 $spacing-horizontal: 3px;
 
-:host{
+:host {
   display: inline-block;
-  .ractive-button {
-    background-color: $primary;
-    border: none;
-    height: 40px;
-    color: white;
-    min-width: 100px;
-  }
+  button {
+      position: relative;
+      background-color: $primary;
+      border: none;
+      height: $button-height;
+      color: white;
+      min-width: 120px;
+      &:hover {
+        background-color: $primary-light;
+      }
+      &:active {
+        background-color: $primary-darker;
+      }
+      &:disabled {
+        background-color: $primary-disabled;
+        cursor: not-allowed;
+      }
+    }
+    .loading {
+      color: transparent;
+      &::after {
+        position: absolute;
+        content: 'x';
+        top: 50%;
+        left: 50%;
+        display: inline-block;
+        width: 17px;
+        height: 17px;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        animation: spin 4s linear infinite;
+      }
+    }
+    @keyframes spin {
+      100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+      }
+    }
 }
-
