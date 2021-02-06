@@ -5,9 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "lint": "ng lint"
   },
   "private": true,
   "dependencies": {
@@ -15,10 +13,11 @@
     "@angular/common": "~11.1.2",
     "@angular/compiler": "~11.1.2",
     "@angular/core": "~11.1.2",
-    "@angular/forms": "~11.1.2",
+    "@angular/forms": "^11.1.2",
     "@angular/platform-browser": "~11.1.2",
     "@angular/platform-browser-dynamic": "~11.1.2",
     "@angular/router": "~11.1.2",
+    "object-hash": "^2.1.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.3"
@@ -32,8 +31,10 @@
     "@angular-eslint/template-parser": "1.1.0",
     "@angular/cli": "~11.1.3",
     "@angular/compiler-cli": "~11.1.2",
+    "@types/hash-sum": "^1.0.0",
     "@types/jasmine": "~3.6.0",
     "@types/node": "^12.11.1",
+    "@types/object-hash": "^1.3.4",
     "@typescript-eslint/eslint-plugin": "4.3.0",
     "@typescript-eslint/parser": "4.3.0",
     "eslint": "^7.6.0",

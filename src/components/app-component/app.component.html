@@ -1,4 +1,6 @@
-<reactive-input [label]="'First name'" [name]="'firstName'" [class]="'custom-class-to-test'" [required]="true"></reactive-input>
-<reactive-input [label]="'First name'" [name]="'firstName'" [required]="true"></reactive-input>
+
+<form [formGroup]='loginForm' *ngIf="loginForm" >
+  <reactive-input [label]="'Email'" [name]="'email'" [control]="email"></reactive-input>
+</form>
 
 <router-outlet></router-outlet>
