@@ -13,6 +13,7 @@ $spacing-horizontal: 3px;
       border: none;
       height: $button-height;
       color: white;
+      font-weight: bold;
       min-width: 120px;
       &:hover {
         background-color: $primary-light;
