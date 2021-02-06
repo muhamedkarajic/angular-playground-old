@@ -1,0 +1,17 @@
+$primary: #6979f8;
+$spacing-vertical: 9px;
+$input-border-width: 3px;
+$input-height: 38px;
+$spacing-horizontal: 3px;
+
+:host{
+  display: inline-block;
+  .ractive-button {
+    background-color: $primary;
+    border: none;
+    height: 40px;
+    color: white;
+    min-width: 100px;
+  }
+}
+

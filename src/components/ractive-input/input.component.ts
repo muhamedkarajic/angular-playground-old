@@ -9,7 +9,7 @@ import { CustomValidator } from 'src/utilities/validators';
   templateUrl: './input.component.html',
   styleUrls: ['./input.component.scss']
 })
-export class InputComponent implements OnInit {
+export class ReactiveInputComponent implements OnInit {
   @Input() name = '';
   @Input() label = '';
   @Input() placeholder = '';

@@ -1,4 +1,4 @@
-import { InputComponent } from 'src/components/ractive-input/input.component';
+import { ReactiveInputComponent } from 'src/components/ractive-input/input.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -7,15 +7,24 @@ import { AppComponent } from 'src/components/app-component/app.component';
 import { RequiredPipe } from 'src/pipes/required-input.pipe';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HasRequiredFieldPipe } from 'src/pipes/has-required-field.pipe';
+import { ReactiveButtonComponent } from 'src/components/reactive-button/reactive-button.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
     AppComponent,
-    InputComponent,
+    ReactiveInputComponent,
+    ReactiveButtonComponent,
     RequiredPipe,
     HasRequiredFieldPipe
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    CommonModule
+  ],
   providers: [],
   bootstrap: [AppComponent],
   exports: []
