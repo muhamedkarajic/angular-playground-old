@@ -1,4 +1,4 @@
-import { InputComponent } from 'src/components/input/input.component';
+import { InputComponent } from 'src/components/ractive-input/input.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
