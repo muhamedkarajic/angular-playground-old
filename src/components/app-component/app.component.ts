@@ -34,7 +34,7 @@ export class AppComponent {
   submitHandler(): void {
     this.loginForm.disable();
     of('LOGIN SUCCESSFUL!')
-      .pipe(delay(1000))
+      .pipe(delay(1500))
       .subscribe((res) => {
         alert(res);
         this.loginForm.enable();

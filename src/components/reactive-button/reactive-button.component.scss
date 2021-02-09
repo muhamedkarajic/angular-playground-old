@@ -8,42 +8,42 @@ $spacing-horizontal: 3px;
 :host {
   display: inline-block;
   button {
-      position: relative;
-      background-color: $primary;
-      border: none;
-      height: $button-height;
-      color: white;
-      font-weight: bold;
-      min-width: 120px;
-      &:hover {
-        background-color: $primary-light;
-      }
-      &:active {
-        background-color: $primary-darker;
-      }
-      &:disabled {
-        background-color: $primary-disabled;
-        cursor: not-allowed;
-      }
+    position: relative;
+    background-color: $primary;
+    border: none;
+    height: $button-height;
+    color: white;
+    font-weight: bold;
+    min-width: 120px;
+    &:hover {
+      background-color: $primary-light;
     }
-    .loading {
-      color: transparent;
-      &::after {
-        position: absolute;
-        content: 'x';
-        top: 50%;
-        left: 50%;
-        display: inline-block;
-        width: 17px;
-        height: 17px;
-        transform: translate(-50%, -50%);
-        background-color: white;
-        animation: spin 4s linear infinite;
-      }
+    &:active {
+      background-color: $primary-darker;
     }
-    @keyframes spin {
-      100% {
-        transform: translate(-50%, -50%) rotate(360deg);
-      }
+    &:disabled {
+      background-color: $primary-disabled;
+      cursor: not-allowed;
     }
+  }
+  .loading {
+    color: transparent;
+    &::after {
+      position: absolute;
+      content: 'x';
+      top: 50%;
+      left: 50%;
+      display: inline-block;
+      width: 17px;
+      height: 17px;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      animation: spin 4s linear infinite;
+    }
+  }
+  @keyframes spin {
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
 }
