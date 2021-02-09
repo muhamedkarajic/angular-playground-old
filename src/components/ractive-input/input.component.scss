@@ -27,16 +27,17 @@ $spacing-horizontal: 3px;
     border-radius: 0;
     border-color: $primary;
     border-style: solid;
+    box-shadow: 3px 3px 0 0 rgb(131 103 216 / 31%);
     height: $input-height;
     padding-left: $spacing-vertical;
     padding-right: $spacing-vertical;
     border-width: $input-border-width;
   }
 
-  .showError {
+  .error {
     color: red;
     font-size: 12px;
-    margin-top: 3px;
+    margin-top: 7px;
     position: absolute;
   }
 }

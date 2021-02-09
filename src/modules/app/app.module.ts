@@ -9,6 +9,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HasRequiredFieldPipe } from 'src/pipes/has-required-field.pipe';
 import { ReactiveButtonComponent } from 'src/components/reactive-button/reactive-button.component';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { CommonModule } from '@angular/common';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,

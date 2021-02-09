@@ -10,13 +10,14 @@ import { CustomValidator } from 'src/utilities/validators';
   styleUrls: ['./input.component.scss']
 })
 export class ReactiveInputComponent implements OnInit {
-  @Input() name = '';
+  @Input() @Required name = '';
+  @Input() @Required control: FormControl;
   @Input() label = '';
   @Input() placeholder = '';
   @Input() type: 'number' | 'text' | 'password' = 'text';
   @Input() required = false;
+  @Input() showError = true;
   @Input() class = '';
-  @Input() @Required control: FormControl;
 
   ngOnInit(): void {
     if (this.control) this.required = Helpers.hasRequiredField(this.control);
@@ -25,7 +26,7 @@ export class ReactiveInputComponent implements OnInit {
       this.placeholder = `Enter ${Helpers.humanize(this.name)}`;
   }
 
-  get showError(): string {
-    return CustomValidator.showError(this.control, this.label);
+  get printError(): string {
+    return CustomValidator.printError(this.control, this.label);
   }
 }
