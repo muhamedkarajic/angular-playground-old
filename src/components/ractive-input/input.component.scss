@@ -1,4 +1,5 @@
 $primary: #6979f8;
+$primary-disabled: #a8b2fa;
 $spacing-vertical: 9px;
 $input-border-width: 3px;
 $input-height: 42px;
@@ -32,6 +33,12 @@ $spacing-horizontal: 3px;
     padding-left: $spacing-vertical;
     padding-right: $spacing-vertical;
     border-width: $input-border-width;
+    &:disabled {
+      border-color: $primary-disabled;
+      color: gray;
+      box-shadow: 3px 3px 0 0 rgb(164 152 201 / 31%);
+      cursor: not-allowed;
+    }
   }
 
   .error {

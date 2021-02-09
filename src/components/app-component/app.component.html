@@ -3,7 +3,7 @@
 <form [formGroup]='loginForm' (ngSubmit)="submitHandler()" >
   <reactive-input [name]='"email"' [control]='email'></reactive-input>
   <reactive-input [name]='"password"' [type]='"password"' [control]='password'></reactive-input>
-  <reactive-button [label]='"Log in"' [type]='"submit"' [loading]='loading' [class]='"button-center"' [disabled]='!loginForm.valid || loading'></reactive-button>
+  <reactive-button [label]='"Log in"' [type]='"submit"' [loading]='loginForm.disabled' [class]='"button-center"' [disabled]='!loginForm.valid || loginForm.disabled'></reactive-button>
 </form>
 
 <router-outlet></router-outlet>

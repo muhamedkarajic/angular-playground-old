@@ -1,6 +1,7 @@
-import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { of } from 'rxjs';
+import { delay } from 'rxjs/operators';
 import { CustomValidator } from 'src/utilities/validators';
 
 @Component({
@@ -9,7 +10,7 @@ import { CustomValidator } from 'src/utilities/validators';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor(private fb: FormBuilder, private http: HttpClient) {}
+  constructor(private fb: FormBuilder) {}
 
   email: FormControl = new FormControl('', [
     CustomValidator.required,
@@ -30,21 +31,14 @@ export class AppComponent {
     password: this.password
   });
 
-  loading = false;
-
   submitHandler(): void {
-    this.loading = true;
-    this.http
-      .post('https://api.slowfoodtime.com/reseller/login', this.loginForm.value)
-      .subscribe(
-        (x) => {
-          console.log(x);
-          this.loading = false;
-        },
-        (x) => {
-          console.log(x);
-          this.loading = false;
-        }
-      );
+    this.loginForm.disable();
+    of('LOGIN SUCCESSFUL!')
+      .pipe(delay(1000))
+      .subscribe((res) => {
+        alert(res);
+        this.loginForm.enable();
+        this.loginForm.reset();
+      });
   }
 }
