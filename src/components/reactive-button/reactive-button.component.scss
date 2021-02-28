@@ -4,41 +4,64 @@ $primary-light: #7887f7;
 $primary-disabled: #a8b2fa;
 $button-height: 45px;
 $spacing-horizontal: 3px;
-
+// background: #fff;
+// border: 3px solid #8367d8;
+// box-shadow: 3px 3px 0 0 rgb(131 103 216 / 31%);
+// font-size: 18px;
+// color: #252525;
+// letter-spacing: .63px;
+// font-weight: 700;
+// padding: 9px 7px;
+// height: 57px;
+// width: 192px;
+// margin: 0;
+// text-transform: uppercase;
+// box-sizing: border-box;
 :host {
   display: inline-block;
   button {
     position: relative;
-    background-color: $primary;
+    // background-color: $primary;
     border: none;
     height: $button-height;
-    color: white;
+    color: black;
     font-weight: bold;
     min-width: 120px;
+    box-shadow: 3px 3px 0 0 rgb(131 103 216 / 31%);
+    border-color: $primary;
+    border-style: solid;
+    background-color: transparent;
+    border-width: 3px;
     &:hover {
-      background-color: $primary-light;
+      border-color: $primary-light;
     }
     &:active {
-      background-color: $primary-darker;
+      border-color: $primary-darker;
     }
     &:disabled {
-      background-color: $primary-disabled;
+      border-color: $primary-disabled;
+      color: gray;
       cursor: not-allowed;
     }
   }
   .loading {
-    color: transparent;
+    color: transparent!important;
     &::after {
       position: absolute;
-      content: 'x';
+      content: '';
       top: 50%;
       left: 50%;
       display: inline-block;
-      width: 17px;
-      height: 17px;
+      // width: 17px;
+      // height: 17px;
       transform: translate(-50%, -50%);
-      background-color: white;
-      animation: spin 4s linear infinite;
+      // background-color: black;
+      border: 4px solid rgb(131 103 216 / 31%);
+      border-radius: 50%;
+      border-top: 4px solid $primary;
+      width: 12px;
+      height: 12px;
+      animation: spin 2s linear infinite;
     }
   }
   @keyframes spin {
