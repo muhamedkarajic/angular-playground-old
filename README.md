@@ -1,5 +1,8 @@
 # Angular 11 Basic Setup
 
+## About
+This project setup includes only the most needed things when creating an angular project with the new es-lint and prettier libreries for cleaner code.
+
 ## Packages
 1. ESLint
 2. Prettier
