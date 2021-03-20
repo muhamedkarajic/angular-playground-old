@@ -6,7 +6,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from 'src/components/app-component/app.component';
 import { RequiredPipe } from 'src/pipes/required-input.pipe';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HasRequiredFieldPipe } from 'src/pipes/has-required-field.pipe';
 import { ReactiveButtonComponent } from 'src/components/reactive-button/reactive-button.component';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
@@ -16,8 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     ReactiveInputComponent,
     ReactiveButtonComponent,
-    RequiredPipe,
-    HasRequiredFieldPipe
+    RequiredPipe
   ],
   imports: [
     BrowserModule,
