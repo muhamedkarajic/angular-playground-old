@@ -1,4 +1,4 @@
-# Angular 11 Default Setup
+# Angular 11 Basic Form
 
 ## Packages
 1. ESLint
