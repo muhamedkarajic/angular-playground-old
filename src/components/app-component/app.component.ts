@@ -11,7 +11,7 @@ import { CustomValidator } from 'src/utilities/validators';
 })
 export class AppComponent {
   constructor(private fb: FormBuilder) {}
-
+  
   email: FormControl = new FormControl('', [
     CustomValidator.required,
     CustomValidator.email

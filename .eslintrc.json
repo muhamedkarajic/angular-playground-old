@@ -38,7 +38,8 @@
             "type": "element",
             "style": "kebab-case"
           }
-        ]
+        ],
+        "prettier/prettier": "off"
       }
     },
     {

@@ -1,13 +1,7 @@
 <div class='ractive-input' [ngClass]='class'>
   <label [for]='name'>{{ label }}{{ required | required }} </label>
-  <input
-    [id]='name'
-    [name]='name'
-    [type]='type'
-    [required]='required'
-    [placeholder]='placeholder'
-    [formControl]='control'
-  />
+  <input [id]='name' [name]='name' [type]='type' [required]='required' [placeholder]='placeholder'
+    [formControl]='control' />
   <div *ngIf='showError && control.invalid && control.errors && (control.dirty || control.touched)' class='error'>
     {{ printError }}
   </div>
