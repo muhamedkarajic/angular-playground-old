@@ -1,5 +1,8 @@
 # Angular 11 Default Setup
 
+## About
+This project includes all default dependencies that come with angular with ESLint and Prattier included with them.
+
 ## Packages
 1. ESLint
 2. Prettier
