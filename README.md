@@ -1,5 +1,8 @@
 # Angular 11 Basic Form
 
+## About
+This project includes components such as reactive-input for clearn code arhitecture as well as an extended class of Valudator that offer additional validation rules.
+
 ## Packages
 1. ESLint
 2. Prettier
