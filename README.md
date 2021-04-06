@@ -1,11 +1,12 @@
 # Angular 11 Basic Form
 
 ## About
-This project includes components such as reactive-input for clearn code arhitecture as well as an extended class of Valudator that offer additional validation rules.
+This project includes autocomplete-input component with is a autocomplete component that can return an object or a specific property of an object.
 
 ## Packages
 1. ESLint
 2. Prettier
+3. Angular Material
 
 ## Commands
 1. Starting project by typing `ng serve`
