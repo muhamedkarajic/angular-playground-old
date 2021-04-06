@@ -1,8 +1,6 @@
+import { of, Observable } from 'rxjs';
 import { Component } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
-import { of } from 'rxjs';
-import { delay } from 'rxjs/operators';
-import { CustomValidator } from 'src/utilities/validators';
+import { debounceTime } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -10,35 +8,30 @@ import { CustomValidator } from 'src/utilities/validators';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor(private fb: FormBuilder) {}
-  
-  email: FormControl = new FormControl('', [
-    CustomValidator.required,
-    CustomValidator.email
-  ]);
+  filterBy = (name: string): string => {
+    return name;
+  };
 
-  password: FormControl = new FormControl('', [
-    CustomValidator.required,
-    CustomValidator.minLength(5),
-    CustomValidator.maxLength(16),
-    CustomValidator.hasNumber,
-    CustomValidator.hasCapitalCase,
-    CustomValidator.hasSmallCase
-  ]);
+  htmlPreview = (name: string): string => {
+    return name.toUpperCase();
+  };
 
-  loginForm: FormGroup = this.fb.group({
-    email: this.email,
-    password: this.password
-  });
+  api(keyword: string): Observable<string[]> {
+    const response = [
+      'Ellie-Mae Rodgers',
+      'Lacey Salter',
+      'Klar Salter',
+      'Teigan Lister',
+      'Amda Soft',
+      'Artur Lord',
+      'Luis Tison'
+    ].filter((name) => name.toLowerCase().includes(keyword.toLowerCase()));
+    return of(response).pipe(debounceTime(1000));
+  }
 
-  submitHandler(): void {
-    this.loginForm.disable();
-    of('LOGIN SUCCESSFUL!')
-      .pipe(delay(1500))
-      .subscribe((res) => {
-        alert(res);
-        this.loginForm.enable();
-        this.loginForm.reset();
-      });
+  preview(name: string): void {
+    setTimeout(() => {
+      alert('Returned target value: ' + name);
+    }, 50);
   }
 }

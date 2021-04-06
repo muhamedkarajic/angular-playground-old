@@ -1,0 +1,16 @@
+<input
+  placeholder="Search by name"
+  [formControl]="keyword"
+  [matAutocomplete]="auto"
+/>
+<mat-autocomplete
+  #auto="matAutocomplete"
+  autoActiveFirstOption
+  (optionSelected)="selectObj($event.option.value)"
+  [displayWith]="filterObject.bind(this)"
+>
+  <mat-option *ngFor="let object of objects" [value]="object">
+    <div *ngIf="htmlPreview" [innerHTML]="htmlPreview(object)"></div>
+    <p *ngIf="!htmlPreview">{{ filterBy(object) }}</p>
+  </mat-option>
+</mat-autocomplete>

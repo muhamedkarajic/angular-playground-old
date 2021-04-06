@@ -1,9 +1,8 @@
-<h1>Welcome!</h1>
-<h5>Please enter your details below:</h5>
-<form [formGroup]='loginForm' (ngSubmit)="submitHandler()" >
-  <reactive-input [name]='"email"' [control]='email'></reactive-input>
-  <reactive-input [name]='"password"' [type]='"password"' [control]='password'></reactive-input>
-  <reactive-button [label]='"Log in"' [type]='"submit"' [loading]='loginForm.disabled' [class]='"button-center"' [disabled]='!loginForm.valid || loginForm.disabled'></reactive-button>
-</form>
+<autocomplete-input
+  [callback]="api"
+  [filterBy]="filterBy"
+  (selected)="preview($event)"
+  [htmlPreview]="htmlPreview"
+></autocomplete-input>
 
 <router-outlet></router-outlet>

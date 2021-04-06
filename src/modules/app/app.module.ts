@@ -9,13 +9,19 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ReactiveButtonComponent } from 'src/components/reactive-button/reactive-button.component';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
+import { AutoCompleteInputComponent } from 'src/autocomplete-input/autocomplete-input.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ReactiveInputComponent,
     ReactiveButtonComponent,
-    RequiredPipe
+    RequiredPipe,
+    AutoCompleteInputComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +29,13 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    CommonModule
+    CommonModule,
+    BrowserAnimationsModule,
+
+    //material
+    MatAutocompleteModule,
+    MatFormFieldModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent],
