@@ -3,10 +3,13 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --hmr",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "buildAsProduction": "ng build --configuration production",
+    "startAsProduction": "ng serve --configuration production",
+    "buildAsProductionWithSourceMaps": "npm run build -- --configuration production --source-map=true"
   },
   "private": true,
   "dependencies": {
